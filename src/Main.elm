@@ -21,13 +21,12 @@ type alias Model =
 init : Model
 init =
     { passage = """
-        -- quick sort in haskell
-        qs :: Ord a => [a] -> [a]
-        qs [] = []
-        qs (x:xs) = qs lower ++ [x] ++ qs higher
-          where
-            lower = filter (<= x)
-            higher = filter (> x)
+        pub fn main() {
+            days.iter()
+                .map(|d| d.spend(Activity.Coding))
+                .map(|c| c.extract_fun())
+                .collect();
+        }
         """
     }
 
@@ -54,4 +53,8 @@ view model =
             log model.passage ""
     in
     div [ class "p-4 bg-slate-100 h-screen" ]
-        [ model.passage |> autocode ]
+        [ div [ class "text-xl text-center m-2" ] [ text "Hey! Allen here. I haven't started on the blogs yet." ]
+        , div [ class "text-base text-slate-500 text-center m-4" ] [ text "For no reason at all, here's some rust." ]
+        , model.passage
+            |> autocode
+        ]

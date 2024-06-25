@@ -4370,7 +4370,7 @@ function _Browser_load(url)
 		}
 	}));
 }
-var $author$project$Main$init = {passage: '\n        -- quick sort in haskell\n        qs :: Ord a => [a] -> [a]\n        qs [] = []\n        qs (x:xs) = qs lower ++ [x] ++ qs higher\n          where\n            lower = filter (<= x)\n            higher = filter (> x)\n        '};
+var $author$project$Main$init = {passage: '\n        pub fn main() {\n            days.iter()\n                .map(|d| d.spend(Activity.Coding))\n                .map(|c| c.extract_fun())\n                .collect();\n        }\n        '};
 var $elm$core$Basics$EQ = {$: 'EQ'};
 var $elm$core$Basics$GT = {$: 'GT'};
 var $elm$core$Basics$LT = {$: 'LT'};
@@ -5236,6 +5236,26 @@ var $author$project$Main$view = function (model) {
 			]),
 		_List_fromArray(
 			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('text-xl text-center m-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Hey! Allen here. I haven\'t started on the blogs yet.')
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('text-base text-slate-500 text-center m-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('For no reason at all, here\'s some rust.')
+					])),
 				$author$project$Components$Code$autocode(model.passage)
 			]));
 };
